@@ -1,0 +1,20 @@
+a.ns.se - 10 minute difference
+https://atlas.ripe.net/api/v2/measurements/1413717/results/?start=1566515400&stop=1566516000&format=json
+b.ns.se
+https://atlas.ripe.net/api/v2/measurements/1413745/results/?start=1566515400&stop=1566516000&format=json
+c.ns.se
+https://atlas.ripe.net/api/v2/measurements/1413725/results/?start=1566768600&stop=1566769200&format=json
+f.ns.se
+https://atlas.ripe.net/api/v2/measurements/1413729/results/?start=1566768000&stop=1566768600&format=json
+g.ns.se
+https://atlas.ripe.net/api/v2/measurements/1413733/results/?start=1566768000&stop=1566768600&format=json
+i.ns.se
+https://atlas.ripe.net/api/v2/measurements/1413697/results/?start=1566769200&stop=1566769800&format=json
+j.ns.se
+https://atlas.ripe.net/api/v2/measurements/1413721/results/?start=1566768000&stop=1566768600&format=json
+x.ns.se
+https://atlas.ripe.net/api/v2/measurements/6960402/results/?start=1566771000&stop=1566771600&format=json
+y.ns.se
+https://atlas.ripe.net/api/v2/measurements/11156555/results/?start=1566769200&stop=1566769800&format=json
+z.ns.se
+https://atlas.ripe.net/api/v2/measurements/11156550/results/?start=1566781200&stop=1566781800&format=json
