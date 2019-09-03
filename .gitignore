@@ -2,3 +2,4 @@
 venv/
 atlas-dns-chaos-2-rtt-countries/
 mapofworld/
+.DS_STORE
