@@ -13,15 +13,15 @@ and returns a list of dns nodes responding and their response time for the query
 from ripe.atlas.sagan import DnsResult
 from ripe.atlas.cousteau import AtlasResultsRequest
 
-kwargs = {
-    "msm_id": 1413716,
-    "start": 1567133400,
-    "stop": 1567134000,
-}
+kwargs = {"msm_id": 1413716, "start": 1567133400, "stop": 1567134000}
 
 is_success, results = AtlasResultsRequest(**kwargs).create()
 
 if is_success:
     for result in results:
         my_result = DnsResult(result)
-        print(my_result.responses[0].abuf.answers[0].data_string + " -> " + str(my_result.responses[0].response_time))
+        print(
+            my_result.responses[0].abuf.answers[0].data_string
+            + " -> "
+            + str(my_result.responses[0].response_time)
+        )
