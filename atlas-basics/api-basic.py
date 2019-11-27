@@ -2,6 +2,7 @@
 # by rog
 # https://ripe-atlas-sagan.readthedocs.io/en/latest/use.html#how-to-use-this-library
 # https://ripe-atlas-sagan.readthedocs.io/en/latest/types.html#dns
+# https://atlas.ripe.net/api/v2/measurements/23265672/results/?start=1574595600&stop=1574596200&format=json
 
 """
 Gets the measurement specified by the measurement id (msm_id) start and end time
@@ -14,6 +15,7 @@ from ripe.atlas.sagan import DnsResult
 from ripe.atlas.cousteau import AtlasResultsRequest
 
 kwargs = {"msm_id": 1413716, "start": 1567133400, "stop": 1567134000}
+# kwargs = {"msm_id": 23265672, "start": 1574595600, "stop": 1574596200}
 
 is_success, results = AtlasResultsRequest(**kwargs).create()
 
