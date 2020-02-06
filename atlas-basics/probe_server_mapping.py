@@ -23,17 +23,12 @@ d = defaultdict(list)
 
 def measurement_list():
     listan = [
-        {"msm_id": 23917314, "start": 1580891978},
         {"msm_id": 3912948, "start": 1580736272, "stop": 1580736603},
+        {"msm_id": 23917314, "start": 1580891978},
         ]
 
     for item in listan:
         yield item
-
-    # kwargs = {"msm_id": 23917314, "start": 1580891978}
-# kwargs = {"msm_id": 3912948, "start": 1580736272, "stop": 1580736603}
-# kwargs = {"msm_id": 1413716, "start": 1567133400, "stop": 1567134000}
-# kwargs = {"msm_id": 23265672, "start": 1574595600, "stop": 1574596200}
 
 
 def measurement_parser(kwargs):
@@ -52,11 +47,15 @@ def measurement_parser(kwargs):
                         d[str(opt.data)].append(probe)
             except:
                  next
+    return d
     # for item in d:
         # print(f"{item} -> {d[item]}")
 
 
 if __name__ == '__main__':
+    coll_dic = defaultdict(list)
     for measurement in measurement_list():
         print(measurement)
-        measurement_parser(measurement)
+        mapping = measurement_parser(measurement)
+        for item in mapping:
+            print(f"{item} -> {len(mapping[item])}")
