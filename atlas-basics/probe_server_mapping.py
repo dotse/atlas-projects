@@ -11,7 +11,9 @@
 """
 Maps which name server instances are answering which atlas probes
 """
-
+# TODO: get timestamp
+# TODO: calculate at what time the nodes were synced
+# TODO: caclulate propagation delay based on txt record
 
 from ripe.atlas.sagan import DnsResult
 from ripe.atlas.cousteau import AtlasResultsRequest
