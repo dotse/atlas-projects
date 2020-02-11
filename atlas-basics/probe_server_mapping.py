@@ -57,10 +57,11 @@ def measurement_parser(kwargs):
                 answer = result['result']['abuf'] + "=="
                 content = base64.b64decode(answer)
                 msg = dns.message.from_wire(content)
-                soa = msg.answer[0] # if it is a soa query the soa will be in msg.answer[0]
+                soa_serial = msg.answer[0].to_text().split()[6]# if it is a soa query the soa will be in msg.answer[0]
+                time = result['timestamp']
                 for opt in msg.options:
                     if opt.otype == dns.edns.NSID:
-                        # print(f"{probe} -> NSID: {str(opt.data)}")
+                        print(f"{probe} -> NSID: {str(opt.data)} -> SOA: {soa_serial} : {time}")
                         d[str(opt.data.decode("utf-8"))].append(probe)
             except:
                  next
