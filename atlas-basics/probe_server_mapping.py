@@ -59,9 +59,10 @@ def measurement_parser(kwargs):
                 msg = dns.message.from_wire(content)
                 soa_serial = msg.answer[0].to_text().split()[6]# if it is a soa query the soa will be in msg.answer[0]
                 time = result['timestamp']
+                response_time = (result['result']['rt'])
                 for opt in msg.options:
                     if opt.otype == dns.edns.NSID:
-                        print(f"{probe} -> NSID: {str(opt.data)} -> SOA: {soa_serial} : {time}")
+                        print(f"{probe} -> NSID: {str(opt.data)} -> SOA: {soa_serial} : {time} -> RT: {response_time}")
                         d[str(opt.data.decode("utf-8"))].append(probe)
             except:
                  next
