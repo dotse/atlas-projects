@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 # by rog
-
-
-#!/usr/bin/env python3
-# by rog
 # https://ripe-atlas-sagan.readthedocs.io/en/latest/use.html#how-to-use-this-library
 # https://ripe-atlas-sagan.readthedocs.io/en/latest/types.html#dns
 # https://atlas.ripe.net/api/v2/measurements/23265672/results/?start=1574595600&stop=1574596200&format=json
